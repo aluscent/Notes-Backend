@@ -1,0 +1,13 @@
+version: "2.0"
+
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRESQL_USERNAME=root
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=root
+    volumes:
+      - ./data:/opt/spark-data
